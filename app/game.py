@@ -1,6 +1,3 @@
-import copy
-import enum
-
 class Game:
     def __init__(self, moves = None, game_start=None):
         if moves:
@@ -21,31 +18,17 @@ class Game:
         move.taken_piece = self._set_taken_piece(move)
         if self._is_new_move(move):
             if self._is_reverse_move(move):
-                print("Reverse Move")
-                move.show_pgn_time()
-                print()
                 reverse_move = self.moves[-1]
                 self.reverse_moves.insert(0, reverse_move)
                 self.moves.pop()
             elif self._is_catch_up_move(move):
-                print("Catch Up")
-                move.show_pgn_time()
-                print()
                 self.moves.append(move)
                 self.reverse_moves.pop()   
             elif self._is_catch_up_move(move) == False and len(self.reverse_moves) >= 1:
-                print("Game End")
-                move.show_pgn_time()
-                print()
                 self.overflow_move = move
                 return False
             else:
-                move.show_pgn_time()
-                print()
                 self.moves.append(move)
-
-        # self.show()
-        # input()
 
     def _set_taken_piece(self, curr_move):
         if len(self.moves) >= 1:
@@ -64,9 +47,6 @@ class Game:
             return False
         prev_move = self.moves[-1]
         if curr_move.board.squares[prev_move.prev_square.y][prev_move.prev_square.x].piece_short == prev_move.new_square.piece_short:
-            # print("Reverse Move Below")
-            # prev_move.board.show()
-            # curr_move.board.show()
             return True
         return False
     

@@ -1,4 +1,3 @@
-import datetime
 from board import Board
     
 class Convert:

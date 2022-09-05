@@ -10,4 +10,4 @@ def app():
     return response
 
 if __name__ == '__main__':
-    Flask.run(server)
+    server.run(host='0.0.0.0')

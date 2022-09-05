@@ -1,0 +1,5 @@
+./app/venv/
+./app/files/results/
+./app/files/videos/
+./app/yolov5/
+./app/__pycache__/

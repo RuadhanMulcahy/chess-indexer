@@ -1,4 +1,5 @@
 from pytube import YouTube
+from os import mkdir
 
 def download_youtube_video(url, video_name):
     video = YouTube(url)
@@ -8,4 +9,5 @@ def download_youtube_video(url, video_name):
     except:
         return False
 
-#OG Vid: https://www.youtube.com/watch?v=zFViSKSOgs0
+video_name = 'https://www.youtube.com/watch?v=zFViSKSOgs0'
+download_youtube_video(video_name, 'video')

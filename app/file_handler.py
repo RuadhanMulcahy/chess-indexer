@@ -1,6 +1,12 @@
+from genericpath import isdir
 import shutil
+import os
 
 from label import Label
+
+def create_folder_if_does_not_exist(path):
+    if os.path.isdir(path) is False:
+        os.mkdir(path)
 
 def remove_old_label_file():
     """

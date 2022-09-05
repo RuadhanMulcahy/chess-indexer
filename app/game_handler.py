@@ -12,10 +12,7 @@ class GameHandler:
         self.games = []
 
     def read_board(self, board, time_stamp): 
-        board.show()
         if self.start.check(board):
-            board.show()
-            print(f"GameStart: {str(time_stamp)}")
             if self.game is None:
                 self.game = Game(game_start=time_stamp)
             elif self.game is not None and len(self.game.moves) > 0:
@@ -25,7 +22,7 @@ class GameHandler:
                 self.game = Game(game_start=time_stamp)
                 self.game.show()
 
-        if self.validate.validate_all(board):
+        if self.validate.validate_all(board) and self.game:
             if self.game.add_move(Move(board, time_stamp, self.start.flipped)) == False:
                 self.games.append(self.game)
                 base_game_start = self.game.game_start

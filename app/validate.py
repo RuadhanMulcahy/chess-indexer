@@ -50,14 +50,4 @@ class Validate:
             return True
         return False
 
-    # def position(self, board):
-    #     if self.highlight_squares(board):
-    #         if self.not_anomaly():
-    #             self.move_is_valid = True
-    #             self.same_position_count = 0
-
-    #             return True
-    #         self.same_position_count += 1                                                               
-    #     return False
-
     

@@ -2,16 +2,14 @@ import os
 import datetime
 from video_handler import download_youtube_video
 from yolov5.detect import run
-from file_handler import read_label_file, remove_old_label_file
+from file_handler import read_label_file, remove_old_label_file, create_folder_if_does_not_exist
 from convert import Convert
 from game_handler import GameHandler
 from misc import extract_integer_from_file_name
 
-
-# video_url = 'https://www.youtube.com/watch?v=MuWCNb9TYqU&ab_channel=GothamChess'
-# video_url = 'https://www.youtube.com/watch?v=zFViSKSOgs0'
 def indexer(video_url):
     video_file_name = 'video'
+    create_folder_if_does_not_exist('./files/videos/')
 
     if download_youtube_video(video_url, video_file_name):
         remove_old_label_file()

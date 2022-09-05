@@ -1,4 +1,4 @@
-class Label():
+class Label:
     def __init__(self, id, x_center, y_center, w, h, conf):
         self.id = id
         self.x_center = float(x_center)

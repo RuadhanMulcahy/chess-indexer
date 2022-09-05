@@ -58,7 +58,6 @@ class Move:
                 return 'O-O-O '
 
     def show_pgn(self):
-        # print(f"{self.pgn} {self.time_stamp}", end='')
         print(self.pgn, end='')
 
     def show_pgn_time(self):
