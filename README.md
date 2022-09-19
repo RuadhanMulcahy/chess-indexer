@@ -12,8 +12,10 @@ Application to convert chess videos into time stamped PGN (Portable Game Notatio
 &emsp;&emsp;:heavy_check_mark:&emsp; Flask server to allow for interaction with the system.</br></br>
 
 ## Run
-sudo docker build -t dockerfile .
+```
+sudo docker build -t dockerfile . </br>
 sudo docker run -p 5000:5000 -d dockerfile
+```
 
 ## Sample Output
 
