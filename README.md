@@ -13,7 +13,7 @@ Application to convert chess videos into time stamped PGN (Portable Game Notatio
 
 ## Run
 ```
-sudo docker build -t dockerfile . </br>
+sudo docker build -t dockerfile . 
 sudo docker run -p 5000:5000 -d dockerfile
 ```
 
