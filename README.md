@@ -19,9 +19,12 @@ sudo docker run -p 5000:5000 -d chess_indexer
 
 ## Sample Input
 Service takes in Youtube URL as a GET request. </br>
-GET Request: http://0.0.0.0:5000?video_url=https://www.youtube.com/watch?v=VT5W8ZXYTAo%26list=LL%26index=4%26ab_channel=Bigguy
+- GET Request: http://0.0.0.0:5000?video_url=https://www.youtube.com/watch?v=VT5W8ZXYTAo%26list=LL%26index=4%26ab_channel=Bigguy
 
 ## Sample Output
+Returned JSON object below shows the result for a video containing a single chess game.
+ - The games object contains all moves for each game contained in the video.
+ - The time_stamps object contains the corresponding timestamps for each move in the games object.
 ```
 {
     "games": {
