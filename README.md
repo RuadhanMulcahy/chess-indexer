@@ -17,9 +17,21 @@ sudo docker build -t chess_indexer .
 sudo docker run -p 5000:5000 -d chess_indexer
 ```
 
+## Sample Input
+Service takes in Youtube URL as a GET request. </br>
+GET Request: http://0.0.0.0:5000?video_url=https://www.youtube.com/watch?v=VT5W8ZXYTAo%26list=LL%26index=4%26ab_channel=Bigguy
+
 ## Sample Output
-
-
+```
+{
+    "games": {
+        "0": "1. g4 2. e5 3. f3 4. Qh4"
+    },
+    "time_stamps": {
+        "0": "1. 0:00:06.933333 2. 0:00:10.366667 3. 0:00:16.833333 4. 0:00:20.100000"
+    }
+}
+```
 
 
 
